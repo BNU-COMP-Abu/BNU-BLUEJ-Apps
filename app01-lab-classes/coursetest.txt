@@ -1,0 +1,6 @@
+Student student1 = new Student("Bob", "456712");
+Course course1 = new Course("Web", "G400");
+student1.enrolOnCourse(course1);
+student1.print();
+Bob, student ID: 456712, credits: 0
+course Web code G400

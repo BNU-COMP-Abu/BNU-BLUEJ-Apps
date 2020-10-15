@@ -80,7 +80,7 @@ public class Student
         return name.substring(0,4) + id.substring(0,3);
     }
     
-    public void enrolonCourse(Course course)
+    public void enrolOnCourse(Course course)
     {
         this.course = course;
     }
@@ -90,5 +90,6 @@ public class Student
     public void print()
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        course.print();
     }
 }
