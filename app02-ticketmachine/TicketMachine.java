@@ -6,8 +6,8 @@
  * sensible amounts of money, and will only print a ticket
  * if enough money has been input.
  * 
- * @author David J. Barnes and Michael Kölling
- * @version 2016.02.29
+ * @author Abu Ahmed
+ * @version 0.1
  * 
  * Modified by Student Name
  */
@@ -20,14 +20,18 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private int total;
 
+    private Ticket aylesbury ticket;
+    
     /**
      * Create a machine that issues tickets of the given price.
      */
-    public TicketMachine(int cost)
+    public TicketMachine(int price)
     {
-        price = cost;
+        this.price = price;
         balance = 0;
         total = 0;
+        
+        ticket = new aylesbury ticket ("aylesbury",220);
     }
 
     /**
