@@ -7,7 +7,7 @@
  * if enough money has been input.
  * 
  * @author Abu Ahmed
- * @version 0.1
+ * @version 22011615
  * 
  * Modified by Student Name
  */
@@ -18,12 +18,15 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
-
-    private Ticket aylesburyticket;
     
-    private Ticket amershamticket;
     
-    private Ticket highwycombeticket;
+    private Ticket aylesburyTicket;
+    
+    private Ticket amershamTicket;
+    
+    private Ticket highwycombeTicket;
+    
+    private Ticket selectedTicket;
     
     /**
      * Create a machine that issues tickets of the given price.
@@ -33,12 +36,26 @@ public class TicketMachine
         
         balance = 0;
         total = 0;
-        
-        aylesburyticket = new Ticket ("aylesbury",220);
-        amershamticket = new Ticket ("amersham",300);
-        highwycombeticket = new Ticket ("highwycombe",300);
+        selectedTicket = null;
+        createTickets();
     }
-
+    
+    public void selectAmershamTicket()
+    {
+        selectedTicket = amershamTicket;
+    }
+    
+    /**
+     * Tickets created for destinations including prices 
+     */
+    private void createTickets()
+    {
+        aylesburyTicket = new Ticket ("aylesbury",220);
+        amershamTicket = new Ticket ("amersham",300);
+        highwycombeTicket = new Ticket ("highwycombe",330);
+    }
+    
+    
     /**
      * Return The amount of money already inserted for the
      * next ticket.
@@ -68,21 +85,31 @@ public class TicketMachine
     public void insert20p()
     {
        balance = balance + 20;
+       printBalance(20);
     }
     
     public void insert10p()
     {
        balance = balance + 10;
+       printBalance(10);
     }
     
     public void insert100p()
     {
        balance = balance + 100;
+       printBalance(100);
     }
     
        public void insert200p()
     {
        balance = balance + 200;
+       printBalance(200);
+    }
+    
+    public void printBalance(int amount)
+    {
+        System.out.println("you have inserted " + amount );
+        System.out.println("current balance = " + balance );
     }
     
     /**
