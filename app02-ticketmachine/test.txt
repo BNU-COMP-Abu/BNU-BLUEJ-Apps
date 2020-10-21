@@ -1,0 +1,23 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.insert100p();
+you have inserted 100
+current balance = 100
+ticketMa1.selectAmershamTicket();
+ticketMa1.printTicket();
+You must insert at least: 120 more cents.
+ticketMa1.insert200p();
+you have inserted 200
+current balance = 300
+ticketMa1.selectAmershamTicket();
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+# 220 cents.
+##################
+
+ticketMa1.printBalance(300);
+you have inserted 300
+current balance = 80
+ticketMa1.getBalance()
+    returned int 80
