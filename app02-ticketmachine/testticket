@@ -1,0 +1,55 @@
+TicketMachine ticketMa1 = new TicketMachine();
+ticketMa1.insert100p();
+you have inserted 100
+current balance = 100
+ticketMa1.selectAmershamTicket();
+ticketMa1.printTicket();
+You must insert at least: 120 more cents.
+ticketMa1.insert200p();
+you have inserted 200
+current balance = 300
+ticketMa1.selectAmershamTicket();
+ticketMa1.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+# 220 cents.
+##################
+
+ticketMa1.printBalance(300);
+you have inserted 300
+current balance = 80
+ticketMa1.getBalance()
+    returned int 80
+TicketMachine ticketMa2 = new TicketMachine();
+ticketMa2.selectAmershamTicket();
+ticketMa2.refundBalance()
+    returned int 0
+ticketMa2.printTicket();
+You must insert at least: 220 more cents.
+ticketMa2.insert200p();
+you have inserted 200
+current balance = 200
+ticketMa2.insert100p();
+you have inserted 100
+current balance = 300
+ticketMa2.insert200p();
+you have inserted 200
+current balance = 500
+ticketMa2.insert10p();
+you have inserted 10
+current balance = 510
+ticketMa2.printBalance(510);
+you have inserted 510
+current balance = 510
+ticketMa2.printTicket();
+##################
+# The BlueJ Line
+# Ticket
+# 220 cents.
+##################
+
+ticketMa2.refundBalance()
+    returned int 290
+ticketMa2.getBalance()
+    returned int 0
