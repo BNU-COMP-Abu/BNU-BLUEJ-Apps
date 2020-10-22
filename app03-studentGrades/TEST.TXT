@@ -1,0 +1,16 @@
+Module module1 = new Module();
+Course course1 = new Course("G400", "Computing");
+Module module1 = new Module("Programming", "CO452");
+course1.addModule(module1, 1);
+Module module1 = new Module("PC", "452");
+module1.awardMark(250);
+Course course1 = new Course("G400", "Computing");
+course1.print();
+course G400 code Computing
+Course course1 = new Course("AI", "G400");
+course1.print();
+course AI code G400
+module: nullProgramming Concepts Mark = 0
+module: nullComputing Mark = 0
+module: nullGlobal business Mark = 0
+module: nullPrinciples of Mangement Mark = 0
