@@ -11,7 +11,9 @@ public class Module
   
   private String codeNo;
   
-  private int mark;   
+  private int mark; 
+  
+  private boolean completed;
   
     
     /**
@@ -22,6 +24,7 @@ public class Module
         mark= 0; 
         this.title = title;
         this. codeNo = codeNo;
+        completed = false; 
     }
     
     public void awardMark(int mark)
@@ -29,6 +32,8 @@ public class Module
         if((mark >= 0 ) && (mark <=100))
         {
             this.mark = mark;
+            if(mark > 40) completed = true;
+            
        }
        else
        {
