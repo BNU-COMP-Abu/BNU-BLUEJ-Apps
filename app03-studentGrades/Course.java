@@ -73,6 +73,18 @@ public class Course
         {
             module1.awardMark(mark);
         }
+        if (moduleNo == 2)
+        {
+            module2.awardMark(mark);
+        }
+        if (moduleNo == 3)
+        {
+            module3.awardMark(mark);
+        }
+        if (moduleNo == 4)
+        {
+            module4.awardMark(mark);
+        }
     }
     
     public void calculateFinalMark()
