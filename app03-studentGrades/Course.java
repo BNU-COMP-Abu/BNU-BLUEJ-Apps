@@ -64,6 +64,13 @@ public class Course
         }
     }
     
+    public void awardMark(int mark, int moduleNo)
+    {
+        if (moduleNo == 1)
+        {
+            module1.awardMark(mark);
+        }
+    }
     
     public void print ()
     {
