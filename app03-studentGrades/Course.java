@@ -17,6 +17,9 @@ public class Course
     private Module module3;
     private Module module4;
     
+    private int averageMark;
+    
+    private Grades grade;
 
     /**
      * Constructor for objects of class Course
@@ -69,6 +72,21 @@ public class Course
         if (moduleNo == 1)
         {
             module1.awardMark(mark);
+        }
+    }
+    
+    public void calculateFinalMark()
+    {
+        averageMark = module1.getMark() + module2.getMark() +         
+            module3.getMark() + module4.getMark(); 
+        averageMark = averageMark / 4;
+    }
+    
+    public void calculateGrade()
+    {
+        if(averageMark >= 0 & averageMark < 40)
+        {
+            grade = Grades.F;
         }
     }
     
