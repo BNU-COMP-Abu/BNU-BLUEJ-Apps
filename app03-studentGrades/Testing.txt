@@ -1,0 +1,44 @@
+Student student1 = new Student("bob", "112244");
+Course course1 = new Course("Programming", "G400");
+Student student2 = new Student("Joe", "1234");
+Course course2 = new Course("AI", "CO41");
+student1.print();
+bob, student ID: 112244, credits: 0
+student1.enrolOnCourse(course1);
+Module module1 = new Module("Programming", "CO452");
+module1.print();
+module: nullProgramming Mark = 0
+student1.print();
+bob, student ID: 112244, credits: 0
+student1.addCredits(15);
+course1.awardMark(10, 1);
+course1.print();
+course Programming code G400
+module: nullProgramming Concepts Mark = 10
+module: nullComputing Mark = 0
+module: nullGlobal business Mark = 0
+module: nullPrinciples of Mangement Mark = 0
+course1.calculateFinalMark();
+course1.createModules();
+student1.print();
+bob, student ID: 112244, credits: 15
+student1.getLoginName()
+    Exception occurred.
+course1.awardMark(15, 1);
+course1.calculateFinalMark();
+course1.calculateGrade();
+course1.print();
+course Programming code G400
+module: nullprogramming Concepts Mark = 15
+module: nullComputing Mark = 0
+module: nullGlobal business Mark = 0
+module: nullPrinciples of Mangement Mark = 0
+module1.awardMark(30);
+module1.getMark()
+    returned int 30
+module1.print();
+module: nullProgramming Mark = 30
+student2.enrolOnCourse(course2);
+course1.awardMark(41, 1);
+student1.print();
+bob, student ID: 112244, credits: 15
