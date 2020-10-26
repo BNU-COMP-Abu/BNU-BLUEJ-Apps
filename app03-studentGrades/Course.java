@@ -31,6 +31,7 @@ public class Course
       //todo add the others 
     }
     
+    
     public void createModules()
     {
         module1 = new Module("programming Concepts", "CO452");
@@ -62,6 +63,7 @@ public class Course
           System.out.print("Invalid module!!!");
         }
     }
+    
     
     public void print ()
     {
