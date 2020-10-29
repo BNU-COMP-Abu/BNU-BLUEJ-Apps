@@ -125,5 +125,8 @@ public class Course
         module2.print();
         module3.print();
         module4.print();
+        
+        System.out.println("Final Mark = " + averageMark); 
+        System.out.println("Final Mark = " + grade); 
     }
 }
