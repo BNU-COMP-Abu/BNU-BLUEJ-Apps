@@ -45,6 +45,16 @@ public class TicketMachine
         selectedTicket = amershamTicket;
     }
     
+        public void selectHighwycombeTicket()
+    {
+        selectedTicket = highwycombeTicket;
+    }
+    
+            public void selectAylesburyTicket()
+    {
+        selectedTicket = aylesburyTicket;
+    }
+    
     /**
      * Tickets created for destinations including prices 
      */
