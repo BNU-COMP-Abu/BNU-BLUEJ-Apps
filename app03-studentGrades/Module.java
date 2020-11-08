@@ -1,6 +1,7 @@
 
 /**
- * Write a description of class Module here.
+ * This class will tell us about the marks that each student has achieved in 
+ * work.
  *
  * @author Abu
  * @version 22011615
