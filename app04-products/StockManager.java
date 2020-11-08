@@ -50,24 +50,24 @@ public class StockManager
     }
     
     
-        /**
+     /**
      * Sell one of the given item.
      * Show the before and after status of the product.
      * @param id The ID of the product being sold.
      */
-    public void sellProduct(int id)
+    public void sellProduct(int id, int amount)
     {
         Product product = findProduct(id);
         
         if(product != null) 
         {
             printDetails(id);
-            product.sellOne();
+            product.sellProduct(id, amount);
             printDetails(id);
         }
     }
     
-        /**
+     /**
      * Show details of the given product. If found,
      * its name and stock quantity will be shown.
      * @param id The ID of the product to look for.
@@ -81,6 +81,17 @@ public class StockManager
             System.out.println(product.toString());
         }
     }
+    
+        public void removeProduct(int id)
+    {
+        Product product = findProduct(id);
+        if(product != null) 
+        {
+            System.out.println("Removing product " + product);
+            stock.remove(product);
+        }
+    }
+    
     
     /**
      * Try to find a product in the stock with the given id.
@@ -98,7 +109,7 @@ public class StockManager
     }
      
     return null;
-   }
+    }
 
 
    /**
