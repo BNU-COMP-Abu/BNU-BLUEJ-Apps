@@ -1,6 +1,9 @@
 
 /**
- * Write a description of class Course here.
+ * The course class tells us about the modules that are avalible and grades.
+ * If by accident someone dosent select 1 of 4 modules the system will 
+ * print out an error message to let them know of their mistake and to rectify
+ * it.
  *
  * @author (Abu Ahmed)
  * @version 0.1
