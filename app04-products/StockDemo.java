@@ -31,12 +31,24 @@ public class StockDemo
         manager.addProduct(new Product(110,  "Vauxhall Corsa"));
     }
     
+        /**
+     * This method will run the test needed to show that products can
+     * be delivered. This method meets the requirements.
+     */
+    public void runDemo()
+    {
+       manager.printAllProducts();
+       demoDeliverProducts();
+       demoSellProducts();
+       demoRemoveProduct();
+    }
+    
     /**
      * Provide a very simple demonstration of how a StockManager
      * might be used. Details of one product are shown, the
      * product is restocked, and then the details are shown again.
      */
-    public void demoDelivery()
+    public void demoDeliverProducts()
     {
         // Show details of all of the products.
         manager.printAllProducts();
@@ -54,6 +66,23 @@ public class StockDemo
         manager.printAllProducts();
     }
 
+    public void demoSellProducts()
+    {
+        System.out.println("\nDemo of Selling\n");
+        int amount = 0;
+        
+        for(int id = 101; id <= 110; id++)
+        {
+            amount++;
+            manager.sellProduct(id, amount);
+        }
+    }
+    
+    public void demoRemoveProduct()
+    {
+        manager.removeProduct(104);
+    }
+    
     /**
      * Get the product with the given id from the manager.
      * An error message is printed if there is no match.
