@@ -1,0 +1,69 @@
+StockManager m = new StockManager();
+StockDemo stockDem1 = new StockDemo(m);
+m.printAllProducts();
+101: Volkswagen Golf MK5 stock level: 0
+102: Honda Civic Type R stock level: 0
+103: Nissan Micra stock level: 0
+104: Bently Continental stock level: 0
+105: Hyundai I30 stock level: 0
+106: Ford Focus ST stock level: 0
+107: Telsa Model S stock level: 0
+108: Jaguar XF stock level: 0
+109: Seat Ibifa stock level: 0
+110: Vauxhall Corsa stock level: 0
+stockDem1.demoDelivery();
+101: Volkswagen Golf MK5 stock level: 0
+102: Honda Civic Type R stock level: 0
+103: Nissan Micra stock level: 0
+104: Bently Continental stock level: 0
+105: Hyundai I30 stock level: 0
+106: Ford Focus ST stock level: 0
+107: Telsa Model S stock level: 0
+108: Jaguar XF stock level: 0
+109: Seat Ibifa stock level: 0
+110: Vauxhall Corsa stock level: 0
+Product delivered : 101: Volkswagen Golf MK5 stock level: 10
+Product delivered : 102: Honda Civic Type R stock level: 10
+Product delivered : 103: Nissan Micra stock level: 10
+Product delivered : 104: Bently Continental stock level: 10
+Product delivered : 105: Hyundai I30 stock level: 10
+Product delivered : 106: Ford Focus ST stock level: 10
+Product delivered : 107: Telsa Model S stock level: 10
+Product delivered : 108: Jaguar XF stock level: 10
+Product delivered : 109: Seat Ibifa stock level: 10
+Product delivered : 110: Vauxhall Corsa stock level: 10
+101: Volkswagen Golf MK5 stock level: 10
+102: Honda Civic Type R stock level: 10
+103: Nissan Micra stock level: 10
+104: Bently Continental stock level: 10
+105: Hyundai I30 stock level: 10
+106: Ford Focus ST stock level: 10
+107: Telsa Model S stock level: 10
+108: Jaguar XF stock level: 10
+109: Seat Ibifa stock level: 10
+110: Vauxhall Corsa stock level: 10
+m.printDetails(101);
+101: Volkswagen Golf MK5 stock level: 10
+m.printAllProducts();
+101: Volkswagen Golf MK5 stock level: 10
+102: Honda Civic Type R stock level: 10
+103: Nissan Micra stock level: 10
+104: Bently Continental stock level: 10
+105: Hyundai I30 stock level: 10
+106: Ford Focus ST stock level: 10
+107: Telsa Model S stock level: 10
+108: Jaguar XF stock level: 10
+109: Seat Ibifa stock level: 10
+110: Vauxhall Corsa stock level: 10
+m.sellProduct(101);
+101: Volkswagen Golf MK5 stock level: 10
+101: Volkswagen Golf MK5 stock level: 9
+m.findProduct(101)
+    returned Object <object reference>
+m.delivery(101, 100);
+Product delivered : 101: Volkswagen Golf MK5 stock level: 109
+m.sellProduct(110);
+110: Vauxhall Corsa stock level: 10
+110: Vauxhall Corsa stock level: 9
+stockDem1.getProduct(101)
+    returned Object <object reference>
