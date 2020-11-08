@@ -1,0 +1,106 @@
+StockManager Stock = new StockManager();
+StockDemo stockDem1 = new StockDemo(Stock );
+StockManager m = new StockManager();
+StockDemo stockDem1 = new StockDemo(m);
+m.printAllProducts();
+101: Volkswagen Golf MK5 stock level: 0
+102: Honda Civic Type R stock level: 0
+103: Nissan Micra stock level: 0
+104: Bently Continental stock level: 0
+105: Hyundai I30 stock level: 0
+106: Ford Focus ST stock level: 0
+107: Telsa Model S stock level: 0
+108: Jaguar XF stock level: 0
+109: Seat Ibifa stock level: 0
+110: Vauxhall Corsa stock level: 0
+StockManager m = new StockManager();
+StockDemo stockDem1 = new StockDemo(m);
+m.printAllProducts();
+101: Volkswagen Golf MK5 stock level: 0
+102: Honda Civic Type R stock level: 0
+103: Nissan Micra stock level: 0
+104: Bently Continental stock level: 0
+105: Hyundai I30 stock level: 0
+106: Ford Focus ST stock level: 0
+107: Telsa Model S stock level: 0
+108: Jaguar XF stock level: 0
+109: Seat Ibifa stock level: 0
+110: Vauxhall Corsa stock level: 0
+m.delivery(101, 5);
+Product delivered : 101: Volkswagen Golf MK5 stock level: 5
+m.delivery(102, 10);
+Product delivered : 102: Honda Civic Type R stock level: 10
+m.printAllProducts();
+101: Volkswagen Golf MK5 stock level: 5
+102: Honda Civic Type R stock level: 10
+103: Nissan Micra stock level: 0
+104: Bently Continental stock level: 0
+105: Hyundai I30 stock level: 0
+106: Ford Focus ST stock level: 0
+107: Telsa Model S stock level: 0
+108: Jaguar XF stock level: 0
+109: Seat Ibifa stock level: 0
+110: Vauxhall Corsa stock level: 0
+StockManager m = new StockManager();
+StockManager m = new StockManager();
+StockDemo stockDem1 = new StockDemo(m);
+m.delivery(201, 1);
+Product ID201NOT FOUND!!!
+StockManager m = new StockManager();
+StockDemo stockDem1 = new StockDemo(m);
+m.printAllProducts();
+101: Volkswagen Golf MK5 stock level: 0
+102: Honda Civic Type R stock level: 0
+103: Nissan Micra stock level: 0
+104: Bently Continental stock level: 0
+105: Hyundai I30 stock level: 0
+106: Ford Focus ST stock level: 0
+107: Telsa Model S stock level: 0
+108: Jaguar XF stock level: 0
+109: Seat Ibifa stock level: 0
+110: Vauxhall Corsa stock level: 0
+stockDem1.demoDelivery();
+101: Volkswagen Golf MK5 stock level: 0
+102: Honda Civic Type R stock level: 0
+103: Nissan Micra stock level: 0
+104: Bently Continental stock level: 0
+105: Hyundai I30 stock level: 0
+106: Ford Focus ST stock level: 0
+107: Telsa Model S stock level: 0
+108: Jaguar XF stock level: 0
+109: Seat Ibifa stock level: 0
+110: Vauxhall Corsa stock level: 0
+Product delivered : 101: Volkswagen Golf MK5 stock level: 5
+Product delivered : 102: Honda Civic Type R stock level: 3
+101: Volkswagen Golf MK5 stock level: 5
+102: Honda Civic Type R stock level: 3
+103: Nissan Micra stock level: 0
+104: Bently Continental stock level: 0
+105: Hyundai I30 stock level: 0
+106: Ford Focus ST stock level: 0
+107: Telsa Model S stock level: 0
+108: Jaguar XF stock level: 0
+109: Seat Ibifa stock level: 0
+110: Vauxhall Corsa stock level: 0
+m.printAllProducts();
+101: Volkswagen Golf MK5 stock level: 5
+102: Honda Civic Type R stock level: 3
+103: Nissan Micra stock level: 0
+104: Bently Continental stock level: 0
+105: Hyundai I30 stock level: 0
+106: Ford Focus ST stock level: 0
+107: Telsa Model S stock level: 0
+108: Jaguar XF stock level: 0
+109: Seat Ibifa stock level: 0
+110: Vauxhall Corsa stock level: 0
+StockManager m = new StockManager();
+StockDemo stockDem1 = new StockDemo(m);
+m.sellProduct(101);
+101: Volkswagen Golf MK5 stock level: 0
+Attempt to sell an out of stock item: Volkswagen Golf MK5
+101: Volkswagen Golf MK5 stock level: 0
+m.delivery(101, 10);
+Product delivered : 101: Volkswagen Golf MK5 stock level: 10
+m.sellProduct(101);
+101: Volkswagen Golf MK5 stock level: 10
+101: Volkswagen Golf MK5 stock level: 9
