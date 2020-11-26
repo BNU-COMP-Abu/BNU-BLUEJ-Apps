@@ -10,7 +10,10 @@
 public class StockApp
 {
     public final int FIRST_ID = 103;
+    public final String ADD = "add";
+    
     // Use to get user input
+   
     private InputReader input;
     
     private StockManager manager;
@@ -18,6 +21,8 @@ public class StockApp
     private StockDemo demo;
     
     private int nextID = FIRST_ID;
+    
+    private String [] menuChoices; 
   
     /**
      * Constructor for objects of class StockApp
@@ -27,8 +32,21 @@ public class StockApp
         input = new InputReader();
         manager = new StockManager();
         demo = new StockDemo(manager);
+        
+        setUpMenu();
     }
 
+    private void setUpMenu()
+    {
+       menuChoices = new String []
+      {
+       "Add a new product",
+      "Remove an old product",
+      "Print all products",
+      "Quit the program",
+       };
+    }
+    
     /**
      * 
      */
@@ -39,14 +57,11 @@ public class StockApp
         while(!finished)
         {
             printHeading();
-            printMenuChoices();
-           
-            String choice = input.getInput();
-            choice = choice.toLowerCase();
             
+            String choice = menu.getMenuChoice(menuChoices);
             executeMenuChoice(choice);
             
-            if(choice.equals("Quit"))
+            if(choice.startsWith("Quit"))
                 finished = true;
         }
     }
@@ -57,7 +72,7 @@ public class StockApp
      */
      public void executeMenuChoice(String choice)
     {
-        if(choice.equals("add"))
+        if(choice.equals(ADD))
         {
            addProduct();
         }
