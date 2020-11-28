@@ -40,8 +40,13 @@ public class StockApp
     {
        menuChoices = new String []
       {
-       "Add a new product",
+      "Add a new product",
       "Remove an old product",
+      "Rename the product",
+      "Sell a product",
+      "Deliver a product",
+      "Low stock list",
+      "Restock the products",
       "Print all products",
       "Quit the program",
        };
@@ -61,7 +66,7 @@ public class StockApp
             String choice = menu.getMenuChoice(menuChoices);
             executeMenuChoice(choice);
             
-            if(choice.startsWith("Quit"))
+            if(choice.startsWith("quit"))
                 finished = true;
         }
     }
@@ -72,19 +77,38 @@ public class StockApp
      */
      public void executeMenuChoice(String choice)
     {
-        if(choice.equals(ADD))
+        if(choice.startsWith(ADD))
         {
            addProduct();
         }
-        else if(choice.equals("remove"))
+        else if(choice.startsWith("remove"))
         {
            removeProduct();
         }
-        else if(choice.equals("printall"))
+        else if(choice.startsWith("print"))
         {
            printAllProducts();
         }
-        
+        else if(choice.startsWith("rename"))
+        {
+           renameProduct();
+        }
+        else if(choice.startsWith("sell"))
+        {
+           sellProduct();
+        }
+        else if(choice.startsWith("deliver"))
+        {
+           deliverProduct();
+        }
+        else if(choice.startsWith("low"))
+        {
+           printLowStock();
+        }
+        else if(choice.startsWith("restock"))
+        {
+           restock();
+        }
     }
     
     public void addProduct()
@@ -131,17 +155,14 @@ public class StockApp
         
     }
     
-    /**
-     * Print out a menu of operation choices
-     */
-    private void printMenuChoices()
+    public void renameProduct()
     {
+        System.out.println("Rename a existing Product");
         System.out.println();
-        System.out.println("    Add:        Add a new product");
-        System.out.println("    Remove:     Remove an old product");
-        System.out.println("    PrintAll:   Print all products");
-        System.out.println("    Quit:       Quit the program");
-        System.out.println();        
+        
+        int id = input.getInt("Please enter the id of product "); 
+         manager.removeProduct(id);
+        
     }
     
     public void printAllProducts()
