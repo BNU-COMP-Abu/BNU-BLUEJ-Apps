@@ -64,6 +64,10 @@ public class StockManager
             product.sellProduct(id, amount);
             printDetails(id);
         }
+        else 
+        {
+            System.out.println("Product ID not found");
+        }
     }
 
     /**
@@ -154,6 +158,34 @@ public class StockManager
             {
                 System.out.println(product);
             }
+        }
+    }
+
+    private ArrayList<Product> getLowStock() 
+    {
+        ArrayList<Product> result = new ArrayList<Product>();
+        for (Product product : stock) {
+            if(product.getQuantity() <= 1)
+            {
+                result.add(product);
+            }
+        }
+        return result;
+    }
+    
+    public void printLowStock()
+    {
+        ArrayList<Product> products = getLowStock();
+
+        if(products.size() > 0)
+        {
+            for (Product product : products) {
+                System.out.println(product);
+            }
+        }
+        else
+        {
+            System.out.println("Currently no Products have low stock");
         }
     }
 }
