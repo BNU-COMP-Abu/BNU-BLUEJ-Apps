@@ -32,9 +32,26 @@ public class InputReader
 
         return inputLine;
     }
-    
+
     public int getInt(String prompt) 
     {
-        return 0;
+        boolean isValid = false;
+        int number = 0;
+
+        while(!isValid)
+        {
+            try
+            {
+                System.out.println(prompt);
+                String value = reader.nextLine();
+                number = Integer.parseInt(value);
+                isValid = true; 
+            }
+            catch (Exception e)
+            {
+                System.out.println("Invalid interger!");
+            }
+        }
+        return number;
     }
 }
