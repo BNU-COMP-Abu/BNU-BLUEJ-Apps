@@ -14,21 +14,17 @@ public class menu
      */
     public static String getMenuChoice(String [] choices)
     {
-        boolean finished = false;
+        boolean isValid = false;
         String choice = null;
         
-        while(!finished)
+        while(!isValid)
         {
             printChoices(choices);
            
             choice = reader.getInput();
             choice = choice.toLowerCase();
             
-            finished = checkIsValid(choices, choice);
-            if(finished)
-            {
-                System.out.println("Not a valid choice");
-            }
+            isValid = checkIsValid(choices, choice);
         }
         return choice;
     }
@@ -41,6 +37,7 @@ public class menu
             if(validChoice.startsWith(choice))
                 return true;
         }
+        System.out.println("Invalid Menu choice");
         return false;
     }
     
