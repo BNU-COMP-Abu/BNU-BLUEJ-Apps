@@ -9,7 +9,7 @@
  */
 public class StockApp
 {
-    public final int FIRST_ID = 103;
+    public final int FIRST_ID = 111;
     public final String ADD = "add";
 
     // Use to get user input
@@ -117,29 +117,35 @@ public class StockApp
 
         System.out.println("Please enter the name of the product ");
         String name = input.getInput();
-
-        boolean isDuplicate = manager.isDuplicateID(nextID);
-        if(isDuplicate)
+        if(name.isBlank())
         {
-            boolean finished = false;
-
-            while(!finished)
+            System.out.println("You have entered a blank name");
+        }
+        else
+        {
+            boolean isDuplicate = manager.isDuplicateID(nextID);
+            if(isDuplicate)
             {
-                nextID++; 
-                if(manager.isDuplicateID(nextID))
+                boolean finished = false;
+
+                while(!finished)
                 {
-                    finished = true;
+                    nextID++; 
+                    if(manager.isDuplicateID(nextID))
+                    {
+                        finished = true;
+                    }
                 }
             }
+
+            Product product = new Product(nextID, name);
+            manager.addProduct(product);
+
+            System.out.println("/nAdded" + product + " to the stock\n");
+            nextID++;
         }
-
-        Product product = new Product(nextID, name);
-        manager.addProduct(product);
-
-        System.out.println("/nAdded" + product + " to the stock\n");
-        nextID++;
     }
-
+    
     public void removeProduct()
     {
         System.out.println("Remove a new Product");
@@ -165,14 +171,21 @@ public class StockApp
 
     public void restock()
     {
-        
+        int stockLevel = input.getInt("Please enter the low stock level");
+        int restockLevel = input.getInt("Please enter the restock level");
+        manager.printLowStock(stockLevel, restockLevel);
     }
-    
+
     public void sellProduct()
     {
-        
+        System.out.println("Sell a existing Product");
+        System.out.println();
+
+        int id = input.getInt("Please enter the id of product "); 
+        int quantity = input.getInt("Please enter the quantity of product "); 
+        manager.sellProduct(id , quantity);
+
     }
-    
     public void deliverProduct()
     {
         System.out.println("Enter ID of product for delivery");
@@ -181,8 +194,9 @@ public class StockApp
 
     private void printLowStock()
     {
-        System.out.println("All Products currently Low Stock\n");
-        manager.printLowStock();
+        int stockLevel = input.getInt("Please enter the low stock level");
+
+        manager.printLowStock(stockLevel , 0);
     }
 
     public void printAllProducts()
