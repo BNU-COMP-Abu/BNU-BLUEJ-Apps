@@ -161,11 +161,12 @@ public class StockManager
         }
     }
 
-    private ArrayList<Product> getLowStock() 
+    private ArrayList<Product> getLowStock(int stockLevel) 
     {
         ArrayList<Product> result = new ArrayList<Product>();
-        for (Product product : stock) {
-            if(product.getQuantity() <= 1)
+        for (Product product : stock) 
+        {
+            if(product.getQuantity() <= stockLevel)
             {
                 result.add(product);
             }
@@ -173,13 +174,16 @@ public class StockManager
         return result;
     }
     
-    public void printLowStock()
+    public void printLowStock(int stockLevel,int restockLevel)
     {
-        ArrayList<Product> products = getLowStock();
+        ArrayList<Product> products = getLowStock(stockLevel);
 
         if(products.size() > 0)
         {
-            for (Product product : products) {
+            for (Product product : products)
+            {
+                if(restockLevel > 0)
+                    product.increaseQuantity(restockLevel);
                 System.out.println(product);
             }
         }
@@ -188,4 +192,5 @@ public class StockManager
             System.out.println("Currently no Products have low stock");
         }
     }
+    
 }
