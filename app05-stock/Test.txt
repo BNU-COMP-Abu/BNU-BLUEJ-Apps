@@ -1,0 +1,200 @@
+Sell a existing Product
+
+Please enter the id of product 
+1000
+Please enter the quantity of product 
+sell
+Invalid interger!
+Please enter the quantity of product 
+2
+Product ID not found
+******************************
+ Stock Management Application 
+    App05: by Abu Ahmed
+******************************
+Enter the first word of your choices are 
+
+   Add a new product
+   Remove an old product
+   Rename the product
+   Sell a product
+   Deliver a product
+   Low stock list
+   Restock the products
+   Print all products
+   Quit the program
+> sell
+Sell a existing Product
+
+Please enter the id of product 
+101
+Please enter the quantity of product 
+10000
+101: Volkswagen Golf MK5 stock level: 90
+101: Volkswagen Golf MK5 stock level: 0
+******************************
+ Stock Management Application 
+    App05: by Abu Ahmed
+******************************
+Enter the first word of your choices are 
+
+   Add a new product
+   Remove an old product
+   Rename the product
+   Sell a product
+   Deliver a product
+   Low stock list
+   Restock the products
+   Print all products
+   Quit the program
+> sell
+Sell a existing Product
+
+Please enter the id of product 
+101
+Please enter the quantity of product 
+-2
+101: Volkswagen Golf MK5 stock level: 0
+Attempt to sell an out of stock item: Volkswagen Golf MK5
+101: Volkswagen Golf MK5 stock level: 0
+******************************
+ Stock Management Application 
+    App05: by Abu Ahmed
+******************************
+Enter the first word of your choices are 
+
+   Add a new product
+   Remove an old product
+   Rename the product
+   Sell a product
+   Deliver a product
+   Low stock list
+   Restock the products
+   Print all products
+   Quit the program
+> sell
+Sell a existing Product
+
+Please enter the id of product 
+102
+Please enter the quantity of product 
+-2
+102: Honda Civic Type R stock level: 100
+102: Honda Civic Type R stock level: 102
+******************************
+ Stock Management Application 
+    App05: by Abu Ahmed
+******************************
+Enter the first word of your choices are 
+
+   Add a new product
+   Remove an old product
+   Rename the product
+   Sell a product
+   Deliver a product
+   Low stock list
+   Restock the products
+   Print all products
+   Quit the program
+> low stock
+Please enter the low stock level
+2
+101: Volkswagen Golf MK5 stock level: 0
+******************************
+ Stock Management Application 
+    App05: by Abu Ahmed
+******************************
+Enter the first word of your choices are 
+
+   Add a new product
+   Remove an old product
+   Rename the product
+   Sell a product
+   Deliver a product
+   Low stock list
+   Restock the products
+   Print all products
+   Quit the program
+> 3
+Invalid Menu choice
+Enter the first word of your choices are 
+
+   Add a new product
+   Remove an old product
+   Rename the product
+   Sell a product
+   Deliver a product
+   Low stock list
+   Restock the products
+   Print all products
+   Quit the program
+> low stock
+Please enter the low stock level
+1
+101: Volkswagen Golf MK5 stock level: 0
+******************************
+ Stock Management Application 
+    App05: by Abu Ahmed
+******************************
+Enter the first word of your choices are 
+
+   Add a new product
+   Remove an old product
+   Rename the product
+   Sell a product
+   Deliver a product
+   Low stock list
+   Restock the products
+   Print all products
+   Quit the program
+> low stock 1
+Invalid Menu choice
+Enter the first word of your choices are 
+
+   Add a new product
+   Remove an old product
+   Rename the product
+   Sell a product
+   Deliver a product
+   Low stock list
+   Restock the products
+   Print all products
+   Quit the program
+> low stock
+Please enter the low stock level
+100
+101: Volkswagen Golf MK5 stock level: 0
+103: Nissan Micra stock level: 100
+104: Bently Continental stock level: 100
+105: Hyundai I30 stock level: 100
+106: Ford Focus ST stock level: 100
+107: Telsa Model S stock level: 100
+108: Jaguar XF stock level: 100
+109: Seat Ibifa stock level: 100
+110: Vauxhall Corsa stock level: 100
+101: Volkswagen Golf MK5 stock level: 100
+102: Honda Civic Type R stock level: 100
+103: Nissan Micra stock level: 100
+104: Bently Continental stock level: 100
+105: Hyundai I30 stock level: 100
+106: Ford Focus ST stock level: 100
+107: Telsa Model S stock level: 100
+108: Jaguar XF stock level: 100
+109: Seat Ibifa stock level: 100
+110: Vauxhall Corsa stock level: 100
+******************************
+ Stock Management Application 
+    App05: by Abu Ahmed
+******************************
+Enter the first word of your choices are 
+
+   Add a new product
+   Remove an old product
+   Rename the product
+   Sell a product
+   Deliver a product
+   Low stock list
+   Restock the products
+   Print all products
+   Quit the program
+> 
