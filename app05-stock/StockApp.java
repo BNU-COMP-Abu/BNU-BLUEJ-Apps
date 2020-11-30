@@ -130,22 +130,22 @@ public class StockApp
 
                 while(!finished)
                 {
-                    nextID++; 
-                    if(manager.isDuplicateID(nextID))
-                    {
-                        finished = true;
-                    }
+                nextID++; 
+                if(manager.isDuplicateID(nextID))
+                {
+                    finished = true;
                 }
             }
-
-            Product product = new Product(nextID, name);
-            manager.addProduct(product);
-
-            System.out.println("/nAdded" + product + " to the stock\n");
-            nextID++;
         }
+
+        Product product = new Product(nextID, name);
+        manager.addProduct(product);
+
+        System.out.println("/nAdded" + product + " to the stock\n");
+        nextID++;
+        }
+
     }
-    
     public void removeProduct()
     {
         System.out.println("Remove a new Product");
